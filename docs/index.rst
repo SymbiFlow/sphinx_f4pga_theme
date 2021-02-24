@@ -42,7 +42,7 @@ Update your ``conf.py`` with the required changes:
 
 .. code-block:: python
 
-    html_theme = 'sphinx_material'
+    html_theme = 'sphinx_symbiflow_theme'
 
 
 There are a lot more ways to customize this theme. See :ref:`Customization`
@@ -50,7 +50,7 @@ or ``theme.conf`` for more details.
 
 .. code-block:: python
 
-    html_theme = 'sphinx_material'
+    html_theme = 'sphinx_symbiflow_theme'
 
     # Material theme options (see theme.conf for more information)
     html_theme_options = {
@@ -66,8 +66,8 @@ or ``theme.conf`` for more details.
         'base_url': 'https://project.github.io/project',
 
         # Set the color and the accent color
-        'color_primary': 'blue',
-        'color_accent': 'light-blue',
+        'color_primary': 'deep-purple',
+        'color_accent': 'indigo',
 
         # Set the repo location to get a badge with stats
         'github_url': 'https://github.com/project/project/',

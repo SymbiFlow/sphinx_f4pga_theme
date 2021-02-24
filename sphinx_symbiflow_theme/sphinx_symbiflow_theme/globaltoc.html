@@ -12,10 +12,10 @@
   {% endif %}
     <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">{{ item.contents }}</a>
     {% if item.current %}
-      {%- set sphinx_material_include_searchbox=False %}
+      {%- set sphinx_symbiflow_theme_include_searchbox=False %}
       {% include "localtoc.html" %}
     {% endif %}
-    {%- set sphinx_material_include_searchbox=True %}
+    {%- set sphinx_symbiflow_theme_include_searchbox=True %}
     {%- if item.children -%}
       <ul class="md-nav__list"> {{ loop(item.children) }}</ul>
     {%- endif %}
