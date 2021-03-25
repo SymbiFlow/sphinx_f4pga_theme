@@ -16,7 +16,7 @@
 from distutils.version import LooseVersion
 import os
 
-import sphinx_material
+import sphinx_symbiflow_theme
 from recommonmark.transform import AutoStructify
 
 FORCE_CLASSIC = os.environ.get("SPHINX_MATERIAL_FORCE_CLASSIC", False)
@@ -31,7 +31,7 @@ copyright = "2019, Kevin Sheppard"
 author = "Kevin Sheppard"
 
 # The full version, including alpha/beta/rc tags
-release = LooseVersion(sphinx_material.__version__).vstring
+release = LooseVersion(sphinx_symbiflow_theme.__version__).vstring
 
 # -- General configuration ---------------------------------------------------
 master_doc = 'index'
@@ -83,10 +83,10 @@ html_sidebars = {
     "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
 }
 
-extensions.append("sphinx_material")
-html_theme_path = sphinx_material.html_theme_path()
-html_context = sphinx_material.get_html_context()
-html_theme = "sphinx_material"
+extensions.append("sphinx_symbiflow_theme")
+html_theme_path = sphinx_symbiflow_theme.html_theme_path()
+html_context = sphinx_symbiflow_theme.get_html_context()
+html_theme = "sphinx_symbiflow_theme"
 
 # material theme options (see theme.conf for more information)
 html_theme_options = {
@@ -156,6 +156,8 @@ extlinks = {
 }
 
 # Enable eval_rst in markdown
+
+
 def setup(app):
     app.add_config_value(
         "recommonmark_config",
