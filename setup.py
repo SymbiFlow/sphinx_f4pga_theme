@@ -20,15 +20,15 @@ REQUIREMENTS_DEV = get_requirements("requirements-dev.txt")
 
 
 setup(
-    name="sphinx_material",
+    name="sphinx_symbiflow_theme",
     version=versioneer.get_version(),
     cmdclass=versioneer.get_cmdclass(),
     description="Material sphinx theme",
     long_description=open("README.rst").read(),
     author="Kevin Sheppard",
     author_email="kevin.k.sheppard@gmail.com",
-    url="https://github.com/bashtage/sphinx-material",
-    packages=["sphinx_material"],
+    url="https://github.com/symbiflow/sphinx_symbiflow_theme",
+    packages=["sphinx_symbiflow_theme"],
     include_package_data=True,
     python_requires=">=3.6",
     install_requires=REQUIREMENTS,
@@ -46,5 +46,5 @@ setup(
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
     ],
-    entry_points={"sphinx.html_themes": ["sphinx_material = sphinx_material",]},
+    entry_points={"sphinx.html_themes": ["sphinx_symbiflow_theme = sphinx_symbiflow_theme",]},
 )

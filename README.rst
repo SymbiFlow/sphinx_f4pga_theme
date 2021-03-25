@@ -42,7 +42,7 @@ Add the following to your conf.py:
 
 .. code-block:: python
 
-    html_theme = 'sphinx_material'
+    html_theme = 'sphinx_symbiflow_theme'
 
 
 There are a lot more ways to customize this theme, as this more comprehensive
@@ -51,7 +51,7 @@ example shows:
 .. code-block:: python
 
     # Required theme setup
-    html_theme = 'sphinx_material'
+    html_theme = 'sphinx_symbiflow_theme'
 
     # Set link name generated in the top bar.
     html_title = 'Project Title'
@@ -70,8 +70,8 @@ example shows:
         'base_url': 'https://project.github.io/project',
 
         # Set the color and the accent color
-        'color_primary': 'blue',
-        'color_accent': 'light-blue',
+        'color_primary': 'deep-purple',
+        'color_accent': 'indigo',
 
         # Set the repo location to get a badge with stats
         'github_url': 'https://github.com/project/project/',

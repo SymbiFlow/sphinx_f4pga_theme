@@ -90,8 +90,8 @@ html_theme = "sphinx_symbiflow_theme"
 
 # material theme options (see theme.conf for more information)
 html_theme_options = {
-    "base_url": "http://bashtage.github.io/sphinx-material/",
-    "github_url": "https://github.com/bashtage/sphinx-material/",
+    "base_url": "https://sphinx-symbiflow-theme.readthedocs.io/",
+    "github_url": "https://github.com/SymbiFlow/sphinx_symbiflow_theme",
     "repo_name": "Material for Sphinx",
     "google_analytics_account": "UA-XXXXX",
     "html_minify": False,
@@ -100,10 +100,10 @@ html_theme_options = {
     "logo_icon": "&#xe869",
     "repo_type": "github",
     "globaltoc_depth": 2,
-    "color_primary": "blue",
-    "color_accent": "cyan",
+    "color_primary": "deep-purple",
+    "color_accent": "indigo",
     "touch_icon": "images/apple-icon-152x152.png",
-    "theme_color": "#2196f3",
+    "theme_color": "deep-purple",
     "master_doc": False,
     "nav_links": [
         {"href": "index", "internal": True, "title": "Material"},
@@ -120,10 +120,8 @@ html_theme_options = {
     "version_dropdown": True,
     "version_json": "_static/versions.json",
     "version_info": {
-        "Release": "https://bashtage.github.io/sphinx-material/",
-        "Development": "https://bashtage.github.io/sphinx-material/devel/",
-        "Release (rel)": "/sphinx-material/",
-        "Development (rel)": "/sphinx-material/devel/",
+        "Release": "https://sphinx-symbiflow-theme.readthedocs.io",
+        "Release (rel)": "/",
     },
     "table_classes": ["plain"],
 }
