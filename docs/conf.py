@@ -16,7 +16,7 @@
 from distutils.version import LooseVersion
 import os
 
-import sphinx_material
+import sphinx_symbiflow_theme
 from recommonmark.transform import AutoStructify
 
 FORCE_CLASSIC = os.environ.get("SPHINX_MATERIAL_FORCE_CLASSIC", False)
@@ -31,9 +31,10 @@ copyright = "2019, Kevin Sheppard"
 author = "Kevin Sheppard"
 
 # The full version, including alpha/beta/rc tags
-release = LooseVersion(sphinx_material.__version__).vstring
+release = LooseVersion(sphinx_symbiflow_theme.__version__).vstring
 
 # -- General configuration ---------------------------------------------------
+master_doc = 'index'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -82,15 +83,15 @@ html_sidebars = {
     "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
 }
 
-extensions.append("sphinx_material")
-html_theme_path = sphinx_material.html_theme_path()
-html_context = sphinx_material.get_html_context()
-html_theme = "sphinx_material"
+extensions.append("sphinx_symbiflow_theme")
+html_theme_path = sphinx_symbiflow_theme.html_theme_path()
+html_context = sphinx_symbiflow_theme.get_html_context()
+html_theme = "sphinx_symbiflow_theme"
 
 # material theme options (see theme.conf for more information)
 html_theme_options = {
-    "base_url": "http://bashtage.github.io/sphinx-material/",
-    "github_url": "https://github.com/bashtage/sphinx-material/",
+    "base_url": "https://sphinx-symbiflow-theme.readthedocs.io/",
+    "github_url": "https://github.com/SymbiFlow/sphinx_symbiflow_theme",
     "repo_name": "Material for Sphinx",
     "google_analytics_account": "UA-XXXXX",
     "html_minify": False,
@@ -99,10 +100,10 @@ html_theme_options = {
     "logo_icon": "&#xe869",
     "repo_type": "github",
     "globaltoc_depth": 2,
-    "color_primary": "blue",
-    "color_accent": "cyan",
+    "color_primary": "deep-purple",
+    "color_accent": "indigo",
     "touch_icon": "images/apple-icon-152x152.png",
-    "theme_color": "#2196f3",
+    "theme_color": "deep-purple",
     "master_doc": False,
     "nav_links": [
         {"href": "index", "internal": True, "title": "Material"},
@@ -119,10 +120,8 @@ html_theme_options = {
     "version_dropdown": True,
     "version_json": "_static/versions.json",
     "version_info": {
-        "Release": "https://bashtage.github.io/sphinx-material/",
-        "Development": "https://bashtage.github.io/sphinx-material/devel/",
-        "Release (rel)": "/sphinx-material/",
-        "Development (rel)": "/sphinx-material/devel/",
+        "Release": "https://sphinx-symbiflow-theme.readthedocs.io",
+        "Release (rel)": "/",
     },
     "table_classes": ["plain"],
 }
@@ -155,6 +154,8 @@ extlinks = {
 }
 
 # Enable eval_rst in markdown
+
+
 def setup(app):
     app.add_config_value(
         "recommonmark_config",

@@ -41,8 +41,8 @@ def get_config():
     cfg.VCS = "git"
     cfg.style = "pep440"
     cfg.tag_prefix = "v"
-    cfg.parentdir_prefix = "sphinx_material-"
-    cfg.versionfile_source = "sphinx_material/_version.py"
+    cfg.parentdir_prefix = "sphinx_symbiflow_theme-"
+    cfg.versionfile_source = "sphinx_symbiflow_theme/_version.py"
     cfg.verbose = False
     return cfg
 
