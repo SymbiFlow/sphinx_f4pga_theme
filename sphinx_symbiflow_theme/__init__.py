@@ -155,12 +155,15 @@ def html_theme_path():
     return [os.path.dirname(os.path.abspath(__file__))]
 
 
-def ul_to_list(node: bs4.element.Tag, fix_root: bool, page_name: str) -> List[dict]:
+def ul_to_list(node: bs4.element.Tag, fix_root: bool, page_name: str,
+               parent_id: str) -> List[dict]:
     out = []
+    idx = 0
     for child in node.find_all("li", recursive=False):
         if callable(child.isspace) and child.isspace():
             continue
         formatted = {}
+        formatted["nested"] = False
         if child.a is not None:
             formatted["href"] = child.a["href"]
             formatted["contents"] = "".join(map(str, child.a.contents))
@@ -169,10 +172,14 @@ def ul_to_list(node: bs4.element.Tag, fix_root: bool, page_name: str) -> List[di
                 formatted["href"] = "#" + slug
             formatted["current"] = "current" in child.a.get("class", [])
         if child.ul is not None:
-            formatted["children"] = ul_to_list(child.ul, fix_root, page_name)
+            formatted["nested"] = True
+            formatted["id"] = "{}-{}".format(parent_id, idx)
+            formatted["children"] = ul_to_list(child.ul, fix_root, page_name,
+                                               formatted["id"])
         else:
             formatted["children"] = []
         out.append(formatted)
+        idx += 1
     return out
 
 
@@ -198,15 +205,17 @@ def derender_toc(
     nodes = []
     try:
         toc = BeautifulSoup(toc_text, features="html.parser")
+        idx = 0
         for child in toc.children:
             if callable(child.isspace) and child.isspace():
                 continue
             if child.name == "p":
                 nodes.append({"caption": "".join(map(str, child.contents))})
             elif child.name == "ul":
-                nodes.extend(ul_to_list(child, fix_root, page_name))
+                nodes.extend(ul_to_list(child, fix_root, page_name, idx))
             else:
                 raise NotImplementedError
+            idx += 1
     except Exception as exc:
         logger = logging.getLogger(__name__)
         logger.warning(

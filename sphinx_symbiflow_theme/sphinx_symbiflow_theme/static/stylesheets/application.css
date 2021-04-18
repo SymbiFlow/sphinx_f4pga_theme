@@ -869,9 +869,6 @@ html .md-footer-meta.md-typeset a:focus,html .md-footer-meta.md-typeset a:hover{
 .md-nav__item--nested>.md-nav__link:after{
     content:"\E313"
 }
-html .md-nav__link[for=__toc],html .md-nav__link[for=__toc]+.md-nav__link:after,html .md-nav__link[for=__toc]~.md-nav{
-    display:none
-}
 .md-nav__link[data-md-state=blur]{
     color:rgba(0,0,0,.54)
 }
@@ -2222,9 +2219,6 @@ html .md-typeset .superfences-tabs>label:hover{
         color:inherit;
         content:"\E8DE"
     }
-    html .md-nav__link[for=__toc]+.md-nav__link{
-        display:none
-    }
     html .md-nav__link[for=__toc]~.md-nav{
         display:flex
     }
@@ -2753,6 +2747,22 @@ html .md-typeset .superfences-tabs>label:hover{
     }
     .no-js .md-nav[data-md-state=expand],.no-js .md-nav__toggle:checked~.md-nav{
         display:block
+    }
+    .md-nav__icon {
+        float: right;
+    }
+    .md-nav__icon .md-icon {
+        display: inline-block;
+        transition: transform 250ms;
+    }
+    .md-nav__icon .md-icon:before {
+        content: "\e409";
+        vertical-align: -0.15rem;
+    }
+    .md-nav__toggle:checked~.md-nav__link .md-icon,
+    .md-nav__toggle:indeterminate~.md-nav__link .md-icon
+    {
+        transform: rotate(90deg);
     }
     .md-nav__item--nested>.md-nav>.md-nav__title{
         display:none
