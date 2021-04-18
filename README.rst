@@ -17,7 +17,7 @@ A Material Design theme for Sphinx documentation. Based on
 `Material for MkDocs <https://squidfunk.github.io/mkdocs-material/>`_,
 and `Guzzle Sphinx Theme <https://github.com/guzzle/guzzle_sphinx_theme>`_.
 
-See the theme's `demonstration site <https://bashtage.github.io/sphinx-material/>`_
+See the theme's `demonstration site <https://sphinx-symbiflow-theme.readthedocs.io/en/latest/>`_
 for examples of rendered rst.
 
 Installation
