@@ -16,10 +16,12 @@
         {%- endfor %}
       </ul>
       <ul class="md-tabs__list" id="symbiflow-header" style="float:right">
+        {%- block extralinks %}
         {% if not theme_hide_symbiflow_links|tobool %}
           <li class="md-tabs__item"><a href="https://symbiflow.github.io" class="md-tabs__link"><i class="md-icon">web</i> SymbiFlow Website</a></li>
           <li class="md-tabs__item"><a href="https://symbiflow.readthedocs.io/en/latest" class="md-tabs__link"><i class="md-icon">library_books</i> SymbiFlow Docs</a></li>
         {%- endif -%}
+        {%- endblock %}
       </ul>
     </div>
   </nav>
