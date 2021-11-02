@@ -6,19 +6,22 @@
   {% if "caption" in item %}
     <span class="md-nav__link caption">{{ item.caption }}</span>
   {% else %}
-  {% if item.current %}
-  <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-  <label class="md-nav__link md-nav__link--active" for="__toc"> {{ item.contents }} </label>
-  {% endif %}
-    <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">{{ item.contents }}</a>
-    {% if item.current %}
-      {%- set sphinx_symbiflow_theme_include_searchbox=False %}
-      {% include "localtoc.html" %}
+    {%- set sphinx_symbiflow_theme_include_searchbox=False %}
+    {%- if item.nested -%}
+      <input class="md-toggle md-nav__toggle" data-md-toggle="toc-{{ item.id }}" type="checkbox" id="__toc-{{ item.id }}">
+      <label class="md-nav__link md-nav__link--nested" for="__toc-{{ item.id }}"> {{ item.contents }}
+        <span class="md-nav__icon"><span class="md-icon"></span></span></label>
+      {%- if item.children -%}
+        <nav class="md-nav">
+          <ul class="md-nav__list">{{ loop(item.children) }}</ul>
+        </nav>
+      {%- endif %}
+    {% else %}
+      <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">
+        {{ item.contents }}</a>
     {% endif %}
     {%- set sphinx_symbiflow_theme_include_searchbox=True %}
-    {%- if item.children -%}
-      <ul class="md-nav__list"> {{ loop(item.children) }}</ul>
-    {%- endif %}
+
   {% endif %}
   </li>
 {%- endfor %}
