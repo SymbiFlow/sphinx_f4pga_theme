@@ -10,3 +10,5 @@ ipykernel
 recommonmark
 sphinx_markdown_tables
 sphinx-copybutton
+# Temporary fix for https://github.com/sphinx-doc/sphinx/issues/9727
+docutils==0.17.1
