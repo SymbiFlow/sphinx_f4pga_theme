@@ -15,19 +15,11 @@
           <li class="md-tabs__item"><a href="{{ parent.link|e }}" class="md-tabs__link">{{ parent.title }}</a></li>
         {%- endfor %}
       </ul>
-      <ul class="md-tabs__list" id="symbiflow-header" style="float:right">
+      <ul class="md-tabs__list" id="chipsalliance-header" style="float:right">
         {%- block extralinks %}
         {% if not theme_hide_symbiflow_links|tobool %}
-	  <li class="md-tabs__item"><a href="https://symbiflow.github.io" class="md-tabs__link">
-	    <i class="md-icon">web</i> SymbiFlow Website</a></li>
-	  <li class="md-tabs__item"><a href="https://symbiflow.readthedocs.io/en/latest" class="md-tabs__link">
-	    <i class="md-icon">library_books</i> SymbiFlow Docs</a></li>
-	  <li class="md-tabs__item"><a href="https://kiwiirc.com/nextclient/#irc://irc.libera.chat/#symbiflow" class="md-tabs__link">
-	    <i class="md-icon">chat_bubble</i> Chat</a></li>
-	  <li class="md-tabs__item"><a href="https://lists.librecores.org/listinfo/symbiflow-announce" class="md-tabs__link">
-	    <i class="md-icon">campaign</i>Announcements</a></li>
-	  <li class="md-tabs__item"><a href="https://lists.librecores.org/listinfo/symbiflow" class="md-tabs__link">
-	    <i class="md-icon">mail</i> Mailing List</a></li>
+	  <li class="md-tabs__item"><a href="https://chipsalliance.org" class="md-tabs__link">
+	    <i class="md-icon">web</i> CHIPS Alliance Website</a></li>
         {%- endif -%}
         {%- endblock %}
       </ul>
