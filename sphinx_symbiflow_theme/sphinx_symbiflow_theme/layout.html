@@ -159,6 +159,7 @@
     <div class="md-footer-meta md-typeset">
       <div class="md-footer-meta__inner md-grid">
         <div class="md-footer-social">
+          {%- block extrasocial %}
           {% if not theme_hide_symbiflow_links|tobool %}
             <div class="md-footer-social__link">
               <a href="https://symbiflow.github.io/" target="_blank">SymbiFlow</a>
@@ -174,6 +175,7 @@
             </div>
             </ul>
           {%- endif %}
+          {%- endblock %}
 
           {%- if theme_github_url %}
             <div class="md-footer-social__link">
