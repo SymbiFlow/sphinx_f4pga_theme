@@ -40,7 +40,7 @@ def setup(app):
     app.sitemap_links = sitemap_links
     app.site_pages = site_pages
     app.add_html_theme(
-        "sphinx_symbiflow_theme", os.path.join(html_theme_path()[0], "sphinx_symbiflow_theme")
+        "sphinx_f4pga_theme", os.path.join(html_theme_path()[0], "sphinx_f4pga_theme")
     )
     return {
         "version": __version__,

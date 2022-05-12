@@ -42,7 +42,7 @@ Update your ``conf.py`` with the required changes:
 
 .. code-block:: python
 
-    html_theme = 'sphinx_symbiflow_theme'
+    html_theme = 'sphinx_f4pga_theme'
 
 
 There are a lot more ways to customize this theme. See :ref:`Customization`
@@ -50,7 +50,7 @@ or ``theme.conf`` for more details.
 
 .. code-block:: python
 
-    html_theme = 'sphinx_symbiflow_theme'
+    html_theme = 'sphinx_f4pga_theme'
 
     # Material theme options (see theme.conf for more information)
     html_theme_options = {

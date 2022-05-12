@@ -1,8 +1,8 @@
 include LICENSE.md
 include README.rst
-recursive-include sphinx_symbiflow_theme/sphinx_symbiflow_theme *
+recursive-include sphinx_f4pga_theme/sphinx_f4pga_theme *
 include versioneer.py
-include sphinx_symbiflow_theme/_version.py
+include sphinx_f4pga_theme/_version.py
 include setup.cfg
 include requirements.txt
 include requirements-dev.txt

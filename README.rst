@@ -1,24 +1,12 @@
 Material Sphinx Theme
 =====================
 
-**Continuous Integration**
+* **Continuous Integration** |Travis Build Status|
+* **Release** |PyPI Status|
+* **License** |MIT License|
 
-|Travis Build Status|
-
-**Release**
-
-|PyPI Status|
-
-**License**
-
-|MIT License|
-
-A Material Design theme for Sphinx documentation. Based on
-`Material for MkDocs <https://squidfunk.github.io/mkdocs-material/>`_,
-and `Guzzle Sphinx Theme <https://github.com/guzzle/guzzle_sphinx_theme>`_.
-
-See the theme's `demonstration site <https://sphinx-symbiflow-theme.readthedocs.io/en/latest/>`_
-for examples of rendered rst.
+A Material Design theme for Sphinx documentation.
+Based on `Material for MkDocs <https://squidfunk.github.io/mkdocs-material/>`_, and `Guzzle Sphinx Theme <https://github.com/guzzle/guzzle_sphinx_theme>`_.
 
 Installation
 ------------
@@ -42,7 +30,7 @@ Add the following to your conf.py:
 
 .. code-block:: python
 
-    html_theme = 'sphinx_symbiflow_theme'
+    html_theme = 'sphinx_f4pga_theme'
 
 
 There are a lot more ways to customize this theme, as this more comprehensive
@@ -51,7 +39,7 @@ example shows:
 .. code-block:: python
 
     # Required theme setup
-    html_theme = 'sphinx_symbiflow_theme'
+    html_theme = 'sphinx_f4pga_theme'
 
     # Set link name generated in the top bar.
     html_title = 'Project Title'

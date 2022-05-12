@@ -6,7 +6,7 @@
   {% if "caption" in item %}
     <span class="md-nav__link caption">{{ item.caption }}</span>
   {% else %}
-    {%- set sphinx_symbiflow_theme_include_searchbox=False %}
+    {%- set sphinx_f4pga_theme_include_searchbox=False %}
     {%- if item.nested -%}
       <input class="md-toggle md-nav__toggle" data-md-toggle="toc-{{ item.id }}" type="checkbox" id="__toc-{{ item.id }}">
       <label class="md-nav__link md-nav__link--nested" for="__toc-{{ item.id }}"> {{ item.contents }}
@@ -20,7 +20,7 @@
       <a href="{{ item.href|e }}" class="md-nav__link{% if item.current %} md-nav__link--active{% endif %}">
         {{ item.contents }}</a>
     {% endif %}
-    {%- set sphinx_symbiflow_theme_include_searchbox=True %}
+    {%- set sphinx_f4pga_theme_include_searchbox=True %}
 
   {% endif %}
   </li>

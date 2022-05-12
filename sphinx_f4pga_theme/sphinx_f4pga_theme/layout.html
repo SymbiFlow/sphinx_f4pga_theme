@@ -1,6 +1,6 @@
 {%- extends "basic/layout.html" %}
 
-{% set sphinx_symbiflow_theme_include_searchbox=True %}
+{% set sphinx_f4pga_theme_include_searchbox=True %}
 
 {%- block body_tag %}
   <body dir=ltr
@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="{{ pathto('_static/stylesheets/application.css', 1) }}"/>
   <link rel="stylesheet" href="{{ pathto('_static/stylesheets/application-palette.css', 1) }}"/>
   <link rel="stylesheet" href="{{ pathto('_static/stylesheets/application-fixes.css', 1) }}"/>
-  <link rel="stylesheet" href="{{ pathto('_static/stylesheets/symbiflow.css', 1) }}"/>
+  <link rel="stylesheet" href="{{ pathto('_static/stylesheets/f4pga.css', 1) }}"/>
   {% block fonticon %}
   <link rel="stylesheet" href="{{ pathto('_static/fonts/material-icons.css', 1) }}"/>
   {% endblock %}
@@ -160,7 +160,7 @@
       <div class="md-footer-meta__inner md-grid">
         <div class="md-footer-social">
           {%- block extrasocial %}
-          {% if not theme_hide_symbiflow_links|tobool %}
+          {% if not theme_hide_f4pga_links|tobool %}
             <div class="md-footer-social__link">
               <a href="https://chipsalliance.org/" target="_blank">CHIPS Alliance</a>
             </div>
@@ -175,7 +175,7 @@
           {%- endif %}
           {%- if theme_license_url %}
             <div class="md-footer-social__link">
-              <!-- <a href="https://github.com/SymbiFlow/sphinx_symbiflow_theme/blob/master/LICENSE" target="_blank"><img alt="License Badge" src="https://img.shields.io/github/license/SymbiFlow/symbiflow-arch-defs"/></a> -->
+              <!-- <a href="https://github.com/f4pga/sphinx_f4pga_theme/blob/master/LICENSE" target="_blank"><img alt="License Badge" src="https://img.shields.io/github/license/f4pga/f4pga-arch-defs"/></a> -->
               <a href="{{ theme_license_url }}" target="_blank">License</a>
             </div>
           {%- endif %}
@@ -202,7 +202,7 @@
             {% trans sphinx_version=sphinx_version|e %}Created using
             <a href="http://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.
             {% endtrans %} and
-            <a href="https://github.com/SymbiFlow/sphinx_symbiflow_theme">Material for
+            <a href="https://github.com/f4pga/sphinx_f4pga_theme">Material for
               Sphinx</a>
           {%- endif %}
         </div>
@@ -213,7 +213,7 @@
   </footer>
   {%- block footer_scripts %}
   <script src="{{ pathto('_static/javascripts/application.js', 1) }}"></script>
-  <script src="{{ pathto('_static/javascripts/symbiflow.js', 1) }}"></script>
+  <script src="{{ pathto('_static/javascripts/f4pga.js', 1) }}"></script>
   <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
   {%- endblock %}
 {%- endblock %}

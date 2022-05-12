@@ -16,7 +16,7 @@
 from distutils.version import LooseVersion
 import os
 
-import sphinx_symbiflow_theme
+import sphinx_f4pga_theme
 from recommonmark.transform import AutoStructify
 
 FORCE_CLASSIC = os.environ.get("SPHINX_MATERIAL_FORCE_CLASSIC", False)
@@ -31,7 +31,7 @@ copyright = "2019, Kevin Sheppard"
 author = "Kevin Sheppard"
 
 # The full version, including alpha/beta/rc tags
-release = LooseVersion(sphinx_symbiflow_theme.__version__).vstring
+release = LooseVersion(sphinx_f4pga_theme.__version__).vstring
 
 # -- General configuration ---------------------------------------------------
 master_doc = 'index'
@@ -84,15 +84,14 @@ html_sidebars = {
     "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
 }
 
-extensions.append("sphinx_symbiflow_theme")
-html_theme_path = sphinx_symbiflow_theme.html_theme_path()
-html_context = sphinx_symbiflow_theme.get_html_context()
-html_theme = "sphinx_symbiflow_theme"
+extensions.append("sphinx_f4pga_theme")
+html_theme_path = sphinx_f4pga_theme.html_theme_path()
+html_context = sphinx_f4pga_theme.get_html_context()
+html_theme = "sphinx_f4pga_theme"
 
 # material theme options (see theme.conf for more information)
 html_theme_options = {
-    "base_url": "https://sphinx-symbiflow-theme.readthedocs.io/",
-    "github_url": "https://github.com/SymbiFlow/sphinx_symbiflow_theme",
+    "github_url": "https://github.com/f4pga/sphinx_f4pga_theme",
     "repo_name": "Material for Sphinx",
     "google_analytics_account": "UA-XXXXX",
     "html_minify": False,
@@ -121,7 +120,7 @@ html_theme_options = {
     "version_dropdown": True,
     "version_json": "_static/versions.json",
     "version_info": {
-        "Release": "https://sphinx-symbiflow-theme.readthedocs.io",
+        "Release": "https://github.com/f4pga/sphinx_f4pga_theme/releases",
         "Release (rel)": "/",
     },
     "table_classes": ["plain"],
