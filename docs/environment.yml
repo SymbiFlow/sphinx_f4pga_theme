@@ -3,6 +3,8 @@ channels:
 - defaults
 dependencies:
 - python
+- pandoc
 - pip
 - pip:
   - -r requirements.txt
+  - ..
