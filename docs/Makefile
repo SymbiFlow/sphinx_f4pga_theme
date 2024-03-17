@@ -11,6 +11,8 @@ SPHINXPROJ      = SphinxContribHDLDiagramsDocs
 SOURCEDIR       = .
 BUILDDIR        = _build
 
+SHELL := /usr/bin/bash
+
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
