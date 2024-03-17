@@ -318,3 +318,6 @@ class DerenderToc(object, metaclass=DerenderTocMeta):
 
 def get_html_context():
     return {"table_fix": TableFix, "derender_toc": DerenderToc}
+
+from . import _version
+__version__ = _version.get_versions()['version']
