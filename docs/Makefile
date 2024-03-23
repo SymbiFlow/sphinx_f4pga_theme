@@ -11,6 +11,8 @@ SPHINXPROJ      = SphinxContribHDLDiagramsDocs
 SOURCEDIR       = .
 BUILDDIR        = _build
 
+SHELL := /usr/bin/bash
+
 # Put it first so that "make" without argument is like "make help".
 help:
 	@$(SPHINXBUILD) -M help "$(SOURCEDIR)" "$(BUILDDIR)" $(SPHINXOPTS) $(O)
@@ -32,7 +34,7 @@ env:
 	./env/Miniconda3-latest-Linux-x86_64.sh -p $(PWD)/env -b -f
 	source env/bin/activate; conda config --system --add envs_dirs $(PWD)/env/envs
 	source env/bin/activate; conda config --system --add pkgs_dirs $(PWD)/env/pkgs
-	source env/bin/activate; conda env update --name base --file ../environment.yml
+	source env/bin/activate; conda env update --name base --file $(PWD)/environment.yml
 
 .PHONY: env
 

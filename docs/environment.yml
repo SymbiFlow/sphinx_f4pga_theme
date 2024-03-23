@@ -1,0 +1,10 @@
+name: sphinx_f4pga_theme
+channels:
+- defaults
+dependencies:
+- python
+- pandoc
+- pip
+- pip:
+  - -r requirements.txt
+  - ..
